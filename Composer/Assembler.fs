@@ -11,7 +11,7 @@ open SignalGenerator
 open WavePacker
 open FSharpx.Choice
 
-let tokenToSound token =
+let private tokenToSound token =
     generateSamples (durationFromToken token) (frequency token.sound)
     |> Array.ofSeq
 
